@@ -8,13 +8,12 @@ package com.github.sebhoss.datasets;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.sebhoss.datasets.DataSets;
-import com.github.sebhoss.datasets.PrimitiveIntegerGenerator;
+import com.github.sebhoss.common.annotation.CompilerWarnings;
 
 /**
- *
+ * Tests for the {@link PrimitiveIntegerGenerator}.
  */
-@SuppressWarnings("static-method")
+@SuppressWarnings(CompilerWarnings.STATIC_METHOD)
 public class PrimitiveIntegerGeneratorTest {
 
     /**
