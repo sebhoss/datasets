@@ -1,8 +1,10 @@
-/* This program is free software. It comes without any warranty, to
+/*
+ * This program is free software. It comes without any warranty, to
  * the extent permitted by applicable law. You can redistribute it
  * and/or modify it under the terms of the Do What The Fuck You Want
  * To Public License, Version 2, as published by Sam Hocevar. See
- * http://www.wtfpl.net/ for more details. */
+ * http://www.wtfpl.net/ for more details.
+ */
 package com.github.sebhoss.datasets;
 
 import java.util.Random;
@@ -18,10 +20,10 @@ public class PrimitiveIntegerGenerator {
     private long   lowestInclusive;
 
     PrimitiveIntegerGenerator() {
-        this.numbersToCreate = 100;
-        this.numberGenerator = new Random();
-        this.highestInclusive = Integer.MAX_VALUE;
-        this.lowestInclusive = Integer.MIN_VALUE;
+        numbersToCreate = 100;
+        numberGenerator = new Random();
+        highestInclusive = Integer.MAX_VALUE;
+        lowestInclusive = Integer.MIN_VALUE;
     }
 
     /**
@@ -30,7 +32,7 @@ public class PrimitiveIntegerGenerator {
      * @return The current generator.
      */
     public PrimitiveIntegerGenerator numbersToCreate(final int numbers) {
-        this.numbersToCreate = numbers;
+        numbersToCreate = numbers;
 
         return this;
     }
@@ -41,7 +43,7 @@ public class PrimitiveIntegerGenerator {
      * @return The current generator.
      */
     public PrimitiveIntegerGenerator seed(final int seed) {
-        this.numberGenerator = new Random(seed);
+        numberGenerator = new Random(seed);
 
         return this;
     }
@@ -52,7 +54,7 @@ public class PrimitiveIntegerGenerator {
      * @return The current generator.
      */
     public PrimitiveIntegerGenerator highestInclusive(final int highest) {
-        this.highestInclusive = highest;
+        highestInclusive = highest;
 
         return this;
     }
@@ -63,7 +65,7 @@ public class PrimitiveIntegerGenerator {
      * @return The current generator.
      */
     public PrimitiveIntegerGenerator lowestInclusive(final int lowest) {
-        this.lowestInclusive = lowest;
+        lowestInclusive = lowest;
 
         return this;
     }
@@ -72,19 +74,19 @@ public class PrimitiveIntegerGenerator {
      * @return A new array of ints.
      */
     public int[] build() {
-        final int[] array = new int[this.numbersToCreate];
+        final int[] array = new int[numbersToCreate];
 
-        for (int index = 0; index < this.numbersToCreate; index++) {
-            array[index] = this.createNextRandomNumber();
+        for (int index = 0; index < numbersToCreate; index++) {
+            array[index] = createNextRandomNumber();
         }
 
         return array;
     }
 
     private int createNextRandomNumber() {
-        final long range = this.highestInclusive - this.lowestInclusive;
-        final double scaled = this.numberGenerator.nextDouble() * range;
-        final double shifted = scaled + this.lowestInclusive;
+        final long range = highestInclusive - lowestInclusive;
+        final double scaled = numberGenerator.nextDouble() * range;
+        final double shifted = scaled + lowestInclusive;
         return (int) shifted;
     }
 
