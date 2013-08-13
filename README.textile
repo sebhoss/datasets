@@ -5,13 +5,33 @@ p. Collection of datasets, intended to be used inside of tests.
 
 h2. Usage
 
-p. Simply reference this module as a dependency to your POM:
+p. Create random integers:
+
+bc. // Create 100 random integers between Integer.MIN_VALUE and Integer.MAX_VALUE
+Datasets.ints()
+        .build();
+
+bc. // Create 10 random integers between -250 and 250
+Datasets.ints()
+        .lowestInclusive(-250)
+        .highestInclusive(250)
+        .numbersToCreate(10)
+        .build();
+
+bc. // Create 100 random integers between 0 and Integer.MAX_VALUE using '42' as seed
+Datasets.ints()
+        .lowestInclusive(0)
+        .seed(42)
+        .build();
+
+h2. Integration
 
 bc. 
 <dependency>
   <groupId>com.github.sebhoss</groupId>
   <artifactId>datasets</artifactId>
   <version>1.0.0</version>
+  <scope>test</scope>
 </dependency>
 
 
