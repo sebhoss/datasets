@@ -8,9 +8,9 @@
 package com.github.sebhoss.datasets;
 
 /**
- * TODO: document
+ * Factory for common datasets.
  */
-public final class DataSets {
+public final class Datasets {
 
     /**
      * @return A new generator for integers.
@@ -19,7 +19,7 @@ public final class DataSets {
         return new PrimitiveIntegerGenerator();
     }
 
-    private DataSets() {
+    private Datasets() {
         // Factory class
     }
 

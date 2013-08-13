@@ -24,7 +24,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldGenerateInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints();
+        final PrimitiveIntegerGenerator generator = Datasets.ints();
 
         // When
         final int[] ints = generator.build();
@@ -39,7 +39,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldGeneratePositiveInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().lowestInclusive(0);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().lowestInclusive(0);
 
         // When
         final int[] ints = generator.build();
@@ -54,7 +54,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldGenerateNegativeInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().highestInclusive(0);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().highestInclusive(0);
 
         // When
         final int[] ints = generator.build();
@@ -69,7 +69,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldGenerateCertainNumberOfInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().numbersToCreate(10);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().numbersToCreate(10);
 
         // When
         final int[] ints = generator.build();
@@ -84,7 +84,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldGenerate100IntsByDefault() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints();
+        final PrimitiveIntegerGenerator generator = Datasets.ints();
 
         // When
         final int[] ints = generator.build();
@@ -99,7 +99,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldContainPositiveInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().lowestInclusive(0);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().lowestInclusive(0);
 
         // When
         final int[] ints = generator.build();
@@ -116,7 +116,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldContainNegativeInts() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().highestInclusive(0);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().highestInclusive(0);
 
         // When
         final int[] ints = generator.build();
@@ -133,7 +133,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldContainIntsInPositiveRange() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().lowestInclusive(0).highestInclusive(1250);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().lowestInclusive(0).highestInclusive(1250);
 
         // When
         final int[] ints = generator.build();
@@ -150,7 +150,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldContainIntsInNegativeRange() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().lowestInclusive(-5000).highestInclusive(-1);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().lowestInclusive(-5000).highestInclusive(-1);
 
         // When
         final int[] ints = generator.build();
@@ -167,7 +167,7 @@ public class PrimitiveIntegerGeneratorTest {
     @Test
     public void shouldContainIntsInRange() {
         // Given
-        final PrimitiveIntegerGenerator generator = DataSets.ints().lowestInclusive(-5000).highestInclusive(5000);
+        final PrimitiveIntegerGenerator generator = Datasets.ints().lowestInclusive(-5000).highestInclusive(5000);
 
         // When
         final int[] ints = generator.build();
