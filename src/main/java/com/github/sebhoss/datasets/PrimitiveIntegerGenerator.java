@@ -10,7 +10,7 @@ package com.github.sebhoss.datasets;
 import java.util.Random;
 
 /**
- * TODO: document
+ * Generator for primitive integers.
  */
 public class PrimitiveIntegerGenerator {
 
