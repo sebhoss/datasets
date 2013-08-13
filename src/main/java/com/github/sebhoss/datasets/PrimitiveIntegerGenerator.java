@@ -12,7 +12,7 @@ import java.util.Random;
 /**
  * Generator for primitive integers.
  */
-public class PrimitiveIntegerGenerator {
+public final class PrimitiveIntegerGenerator {
 
     private int    numbersToCreate;
     private Random numberGenerator;
