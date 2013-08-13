@@ -28,17 +28,44 @@
   <!--                               INFORMATIONS                              -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <artifactId>datasets</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <url>https://github.com/sebhoss/datasets</url>
+  <inceptionYear>2013</inceptionYear>
+  <name>Datasets</name>
+  <description>Common datasets</description>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                  SOURCE                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <scm>
+    <connection>scm:git:git://github.com/sebhoss/datasets.git</connection>
+    <developerConnection>scm:git:git@github.com:sebhoss/datasets.git</developerConnection>
+    <tag>master</tag>
+    <url>${project.url}</url>
+  </scm>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                                  ISSUES                                 -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <issueManagement>
+    <system>GitHub</system>
+    <url>${project.url}/issues</url>
+  </issueManagement>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!--                               DEPENDENCIES                              -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <dependencies>
-  	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<scope>test</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.github.sebhoss</groupId>
-  		<artifactId>common-annotations</artifactId>
-  		<version>1.0.0</version>
-  	</dependency>
+    <dependency>
+      <groupId>com.github.sebhoss</groupId>
+      <artifactId>common-annotations</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
