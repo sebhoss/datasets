@@ -2,7 +2,6 @@ h1. Datasets "!https://secure.travis-ci.org/sebhoss/datasets.png!":http://travis
 
 p. Collection of datasets, intended to be used inside of tests.
 
-
 h2. Usage
 
 p. Create random integers:
