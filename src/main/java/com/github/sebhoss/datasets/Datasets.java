@@ -19,6 +19,13 @@ public final class Datasets {
         return new PrimitiveIntegerGenerator();
     }
 
+    /**
+     * @return A new generator for longs.
+     */
+    public static PrimitiveLongGenerator longs() {
+        return new PrimitiveLongGenerator();
+    }
+
     private Datasets() {
         // Factory class
     }
