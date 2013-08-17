@@ -4,14 +4,14 @@ p. Collection of datasets, intended to be used inside of tests.
 
 h2. Usage
 
-p. Create random integers:
+p. Create random integers or longs:
 
 bc. // Create 100 random integers between Integer.MIN_VALUE and Integer.MAX_VALUE
 Datasets.ints()
         .build();
 
-bc. // Create 10 random integers between -250 and 250
-Datasets.ints()
+bc. // Create 10 random longs between -250 and 250
+Datasets.longs()
         .lowestInclusive(-250)
         .highestInclusive(250)
         .numbersToCreate(10)
@@ -19,25 +19,6 @@ Datasets.ints()
 
 bc. // Create 100 random integers between 0 and Integer.MAX_VALUE using '42' as seed
 Datasets.ints()
-        .lowestInclusive(0)
-        .seed(42)
-        .build();
-
-p. Create random longs:
-
-bc. // Create 100 random longs between Integer.MIN_VALUE and Integer.MAX_VALUE
-Datasets.longs()
-        .build();
-
-bc. // Create 10 random longs between -5000 and 375
-Datasets.longs()
-        .lowestInclusive(-5000)
-        .highestInclusive(375)
-        .numbersToCreate(10)
-        .build();
-
-bc. // Create 100 random longs between 0 and Integer.MAX_VALUE using '42' as seed
-Datasets.longs()
         .lowestInclusive(0)
         .seed(42)
         .build();
