@@ -17,9 +17,15 @@ Datasets.longs()
         .numbersToCreate(10)
         .build();
 
-bc. // Create 100 random integers between 0 and Integer.MAX_VALUE using '42' as seed
-Datasets.ints()
+bc. // Create 100 random floats between 0 and Integer.MAX_VALUE using '42' as seed
+Datasets.floats()
         .lowestInclusive(0)
+        .seed(42)
+        .build();
+        
+bc. // Create 100 random doubles between Integer.MIN_VALUE and 0 using '42' as seed
+Datasets.floats()
+        .highestInclusive(0)
         .seed(42)
         .build();
 

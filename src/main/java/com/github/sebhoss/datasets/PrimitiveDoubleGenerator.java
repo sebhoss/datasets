@@ -10,16 +10,16 @@ package com.github.sebhoss.datasets;
 import java.util.Random;
 
 /**
- * Generator for primitive longs.
+ * Generator for primitive doubles.
  */
-public class PrimitiveLongGenerator {
+public final class PrimitiveDoubleGenerator {
 
     private int    numbersToCreate;
     private Random numberGenerator;
     private long   highestInclusive;
     private long   lowestInclusive;
 
-    PrimitiveLongGenerator() {
+    PrimitiveDoubleGenerator() {
         numbersToCreate = 100;
         numberGenerator = new Random();
         highestInclusive = Integer.MAX_VALUE;
@@ -31,7 +31,7 @@ public class PrimitiveLongGenerator {
      *            The numbers to create.
      * @return The current generator.
      */
-    public PrimitiveLongGenerator numbersToCreate(final int numbers) {
+    public PrimitiveDoubleGenerator numbersToCreate(final int numbers) {
         numbersToCreate = numbers;
 
         return this;
@@ -42,7 +42,7 @@ public class PrimitiveLongGenerator {
      *            The random number generator seed.
      * @return The current generator.
      */
-    public PrimitiveLongGenerator seed(final int seed) {
+    public PrimitiveDoubleGenerator seed(final int seed) {
         numberGenerator = new Random(seed);
 
         return this;
@@ -53,7 +53,7 @@ public class PrimitiveLongGenerator {
      *            The highest number to generate.
      * @return The current generator.
      */
-    public PrimitiveLongGenerator highestInclusive(final int highest) {
+    public PrimitiveDoubleGenerator highestInclusive(final int highest) {
         highestInclusive = highest;
 
         return this;
@@ -64,17 +64,17 @@ public class PrimitiveLongGenerator {
      *            The lowest number to generate.
      * @return The current generator.
      */
-    public PrimitiveLongGenerator lowestInclusive(final int lowest) {
+    public PrimitiveDoubleGenerator lowestInclusive(final int lowest) {
         lowestInclusive = lowest;
 
         return this;
     }
 
     /**
-     * @return A new array of longs.
+     * @return A new array of doubles.
      */
-    public long[] build() {
-        final long[] array = new long[numbersToCreate];
+    public double[] build() {
+        final double[] array = new double[numbersToCreate];
 
         for (int index = 0; index < numbersToCreate; index++) {
             array[index] = createNextRandomNumber();
@@ -83,11 +83,11 @@ public class PrimitiveLongGenerator {
         return array;
     }
 
-    private long createNextRandomNumber() {
+    private double createNextRandomNumber() {
         final long range = highestInclusive - lowestInclusive;
         final double scaled = numberGenerator.nextDouble() * range;
         final double shifted = scaled + lowestInclusive;
-        return (long) shifted;
+        return shifted;
     }
 
 }

@@ -26,6 +26,20 @@ public final class Datasets {
         return new PrimitiveLongGenerator();
     }
 
+    /**
+     * @return A new generator for doubles.
+     */
+    public static PrimitiveDoubleGenerator doubles() {
+        return new PrimitiveDoubleGenerator();
+    }
+
+    /**
+     * @return A new generator for floats.
+     */
+    public static PrimitiveFloatGenerator floats() {
+        return new PrimitiveFloatGenerator();
+    }
+
     private Datasets() {
         // Factory class
     }
