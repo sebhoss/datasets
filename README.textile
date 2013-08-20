@@ -24,7 +24,7 @@ Datasets.floats()
         .build();
         
 bc. // Create 100 random doubles between Integer.MIN_VALUE and 0 using '42' as seed
-Datasets.floats()
+Datasets.doubles()
         .highestInclusive(0)
         .seed(42)
         .build();
