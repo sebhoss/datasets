@@ -7,35 +7,37 @@ h2. Usage
 p. Create random integers or longs:
 
 bc. // Create 100 random integers between Integer.MIN_VALUE and Integer.MAX_VALUE
-Datasets.ints()
+int[] numbers = Datasets.ints()
         .build();
 
 bc. // Create 10 random longs between -250 and 250
-Datasets.longs()
+long[] numbers = Datasets.longs()
         .lowestInclusive(-250)
         .highestInclusive(250)
         .numbersToCreate(10)
         .build();
 
 bc. // Create 100 random floats between 0 and Integer.MAX_VALUE using '42' as seed
-Datasets.floats()
+float[] numbers = Datasets.floats()
         .lowestInclusive(0)
         .seed(42)
         .build();
         
 bc. // Create 100 random doubles between Integer.MIN_VALUE and 0 using '42' as seed
-Datasets.doubles()
+double[] numbers = Datasets.doubles()
         .highestInclusive(0)
         .seed(42)
         .build();
 
 h2. Integration
 
+p. This project is uploaded into Maven Central. "Take a look":http://search.maven.org/#search%7Cga%7C1%7Cg%3Acom.github.sebhoss%20a%3Adatasets for the latest version.
+
 bc. 
 <dependency>
   <groupId>com.github.sebhoss</groupId>
   <artifactId>datasets</artifactId>
-  <version>1.0.0</version>
+  <version>${version.datasets}</version>
   <scope>test</scope>
 </dependency>
 
