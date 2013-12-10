@@ -7,5 +7,5 @@
 /**
  * Common data sets for tests, etc.
  */
-@com.github.sebhoss.common.annotation.NotNullByDefault
+@com.github.sebhoss.nullanalysis.NotNullByDefault
 package com.github.sebhoss.datasets;

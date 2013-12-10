@@ -9,7 +9,7 @@ package com.github.sebhoss.datasets;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.sebhoss.common.annotation.CompilerWarnings;
+import com.github.sebhoss.warnings.CompilerWarnings;
 
 /**
  * Tests for the {@link PrimitiveFloatGenerator}.
