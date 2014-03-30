@@ -1,6 +1,6 @@
 h1. Datasets "!https://secure.travis-ci.org/sebhoss/datasets.png!":http://travis-ci.org/sebhoss/datasets "!https://www.ohloh.net/p/datasets/widgets/project_thin_badge.gif!":https://www.ohloh.net/p/datasets/
 
-p. Collection of datasets, intended to be used inside of tests.
+p. Collection of datasets, intended to be used inside of tests. **DEPRECATED: Use "Java 8 Random.doubles()":http://docs.oracle.com/javase/8/docs/api/java/util/Random.html#doubles--, etc**
 
 h2. Usage
 
